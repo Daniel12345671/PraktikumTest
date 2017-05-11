@@ -1,0 +1,28 @@
+using unity.Engine bla..
+
+Wechselgrösse: mono(...)
+
+{
+
+	Vector2 groesse; //ist localscale vector2?
+	int coin;
+	CoinZahl coinZahl;
+
+	void Start() 
+	{
+		groesse = this.Transform.localScale;
+		coinZahl = GameObject.findgameobjectwithtag("Player").GetComponent<CoinZahl>();
+	}
+
+	void Update () 
+	{
+		coin = coinZahl.coin;
+		
+		if (coin == 3) 
+		{
+			groesse.x = groesse.x*2;
+			groesse.y = groesse.y*2;
+			this.Transform.localScale = groesse;
+		}
+	}
+}
